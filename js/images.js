@@ -111,7 +111,7 @@ function showSearchBar(){
     document.getElementById('search_tap').play();
     document.getElementById('search_icon').style.right = "-5em";
     document.getElementById('search_form').style.left = "1em";
-    document.getElementById('search_term').style.width = "70%";
+    document.getElementById('search_term').style.width = "73%";
     var rotate = document.getElementById("search_button");
     rotate.classList.add('rotate');
 }
@@ -124,8 +124,7 @@ function hideSearchBar(){
     document.getElementById('search_term').value = '';
     var rotate = document.getElementById("search_button");
     rotate.classList.remove('rotate');
-    var audio = new Audio('tap.mp3');
-    audio.play();
+    document.getElementById('anywhere_tap').play();
 }
 
 

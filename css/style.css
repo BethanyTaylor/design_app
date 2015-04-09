@@ -27,7 +27,7 @@ html, body{
 
 footer {
 	position:fixed;
-	bottom: 0;
+	bottom: -2px;
 	width:100%;
 	height:3.5em;
 	background-color: #58585b;
@@ -52,7 +52,11 @@ footer {
 #search_term {
 	height: 2em;
   	width: 0%;
-  	transition: width .6s;
+  	transition: width 1s;
+    padding-left: .5em;
+    font-size: 1em;
+    border: none;
+
 }
 
 #search_button {
@@ -99,11 +103,6 @@ footer {
 }
 /*--------------------------------------------*/
 
-#search_term {
-    padding-left: .5em;
-    font-size: 1em;
-}
-
 @-webkit-keyframes change{
 	/*where to start the animation*/
 	/*If translate is 0, no animation will be seen, then the higher the neg number,*/
@@ -143,10 +142,7 @@ footer {
 
 #video, #canvas{
 	display: block;
-	min-width: 92%;
-	min-height: 80%;
-	width: auto;
-	height: auto;
+	width: 100%;
 	margin: .9em auto;
 }
 
