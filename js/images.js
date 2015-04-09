@@ -95,12 +95,16 @@ document.getElementById('search_icon').addEventListener('touchend', function(eve
 
 var onlongtouch = function() {
     var cam = document.getElementById("camera");
+    var results = document.getElementById("results");
     if (cam.style.display == "block"){
         go(true);
         cam.style.display = "none";
+        results.style.display = "block";
+
     } else {
         go();
         cam.style.display = "block";
+        results.style.display = "none";
     }
  };
 
