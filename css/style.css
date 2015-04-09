@@ -1,0 +1,151 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+html, body{
+	width: 100%;
+	height: 100%;
+
+}
+
+#results img{
+	display: block;
+	min-width: 92%;
+	min-height: 80%;
+	width: auto;
+	height: auto;
+	margin: .9em auto;
+
+	transition: transform 2s ease;
+	transform: perspective( 900px ) rotateY( 30deg );
+}
+
+.flatten {
+	transform: none !important;
+}
+
+footer {
+	position:fixed;
+	bottom: 0;
+	width:100%;
+	height:3.2em;
+	background-color: #58585b;
+	opacity: .8;
+}
+
+#search_icon {
+	height: 50px;
+	background: url(../images/search.svg) no-repeat right;
+	position: absolute;
+    right: 1em;
+    width: 50px;
+}
+
+#search_form{
+	line-height: 3.5em;
+	left: -100em;
+	position: absolute;
+	width: 100%;
+}
+
+#search_term {
+	height: 2em;
+  	width: 0%;
+  	transition: width .6s;
+}
+
+#search_button {
+	height: 50px;
+	background: url(../images/search2.svg) no-repeat right;
+	position: absolute;
+    right: 2.88em;
+    width: 50px;
+    border: none;
+    box-shadow: none;
+    outline-width: 0px;
+    outline: none;
+}
+
+.rotate {
+/*Add these twice, to make sure it works in every browser*/
+	/*Give it a name so I can add keyframes*/
+    -webkit-animation-name: change;
+	/*how to move*/
+/*    -webkit-animation-timing-function: ease-in;
+*/	/*how long the animation will last*/
+    -webkit-animation-duration: 3s;
+
+	/*Same as above, for other browsers*/
+    animation-name: change;
+/*    animation-timing-function: ease-in;
+*/    animation-duration: 0.3s;
+}
+
+
+
+/*--Edits the "search for inspiration" text---*/
+#search_term::-webkit-input-placeholder {
+    color: #444;
+}
+#search_term:-moz-placeholder {
+    color: #444;
+}
+#search_term::-moz-placeholder {
+    color: #444;
+}
+#search_term:-ms-input-placeholder {
+    color: #444;
+}
+/*--------------------------------------------*/
+
+#search_term {
+    padding-left: .5em;
+    font-size: 1em;
+}
+
+@-webkit-keyframes change{
+	/*where to start the animation*/
+	/*If translate is 0, no animation will be seen, then the higher the neg number,*/
+	/*the higher the animate will start from. If the number is positive, it will*/
+	/*start in the body and move up.*/
+    0% {
+        -webkit-transform: rotate(320deg);
+    }
+
+	
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+/*same code as above*/
+@keyframes body {
+    
+}
+
+#camera {
+	display: none;
+}
+
+#snap {
+	letter-spacing: .03em;
+	height: 54px;
+    width: 138px;
+	margin: 0 auto;
+	display: block;
+	border: none;
+	border-radius: 5px;
+	background-color: #FF5F10;
+	color: #fff;
+	font-size: 1em;
+}
+
+
+
+
+
+
+
+
+

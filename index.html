@@ -3,9 +3,12 @@
 <head>
 	
 	<title>Designer Inspiration App</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui=yes">
 	<link rel="stylesheet" type="text/css" href="css/style.css">	
-	<script type="text/javascript" src="js/images.js"></script>
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+	<script type="text/javascript">google.load("search", "1");</script>
+
 	
 	<!--******************************************
 		        Designer Inspiration App
@@ -16,14 +19,34 @@
 	
 </head>
 
-<body>
-	Search for <b>cats, dogs, cakes</b>, or anything else that takes your fancy :-)
-  	 <br/>
-	 <input id="searchterm" />
-	 <button id="search">search</button>
+<body id="body" ontouchstart="hideSearchBar()">
+
+	<div id = "camera">
+	    <video id="video" width="320" height="240" autoplay></video>
+	   
+	    <input type ="submit" value = "Take Photo" id="snap"/>
+	    <canvas id="canvas" width="320" height="240"></canvas>
+	</div>     
+
+	
 	 <div id="results"></div>
 	 <div id = "load"></div>
 
-	
+	 <footer ontouchstart="event.stopPropagation()">
+	 	<form onsubmit="search(); return false;" id = "search_form">
+	 		<input id="search_term" placeholder = "Search for inspiration..."/>
+	 		<input type = "submit" value = "" id = "search_button"/>
+	 	</form>
+
+	 	<audio id = "search_tap">
+  			<source src="slide.mp3" type="audio/mp3">
+		</audio>
+
+	 	<div id = "search_icon">
+	 	</div>
+
+	 </footer>
+
+	<script type="text/javascript" src="js/images.js"></script>
 </body>
 </html>
