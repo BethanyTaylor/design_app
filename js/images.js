@@ -118,13 +118,13 @@ function showSearchBar(){
 
 //hide the search bar and show the original search icon
 function hideSearchBar(){
+    document.getElementById('anywhere_tap').play();
     document.getElementById('search_form').style.left = "-100em";
     document.getElementById('search_icon').style.right = "1em";
     document.getElementById('search_term').style.width = "0%";
     document.getElementById('search_term').value = '';
     var rotate = document.getElementById("search_button");
     rotate.classList.remove('rotate');
-    document.getElementById('anywhere_tap').play();
 }
 
 
@@ -178,7 +178,9 @@ function hideSearchBar(){
         }
         // Trigger photo take
         document.getElementById("snap").addEventListener("click", function() {
-            context.drawImage(video, 0, 0, 320, 240);
+            canvas.style.height = video.offsetWidth/1.333+"px";
+            context.drawImage(video, 0, 0, video.offsetWidth, video.offsetWidth/1.333);
+
         });
 
 

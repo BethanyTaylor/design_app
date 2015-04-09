@@ -27,11 +27,12 @@ html, body{
 
 footer {
 	position:fixed;
-	bottom: -2px;
+	bottom: 0px;
 	width:100%;
 	height:3.5em;
 	background-color: #58585b;
 	opacity: .95;
+	padding-bottom: 5px;
 }
 
 #search_icon {
@@ -138,6 +139,11 @@ footer {
 	background-color: #FF5F10;
 	color: #fff;
 	font-size: 1em;
+
+	border: none;
+    box-shadow: none;
+    outline-width: 0px;
+    outline: none;
 }
 
 #video, #canvas{
